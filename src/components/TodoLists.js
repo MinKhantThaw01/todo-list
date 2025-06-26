@@ -3,7 +3,7 @@ const TodoLists = ({ todos }) => {
 
         <ul className="task-list">
             {todos.map((todo) => (
-                <li>
+                <li key={todo.id}>
                     <label className="task">
                         <input type="checkbox" />
                         <span className="custom-checkbox"></span>

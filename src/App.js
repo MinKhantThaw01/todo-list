@@ -14,12 +14,24 @@ function App() {
       .then((todos) => setTodos(todos));
   }, [])
 
+
+  const addTodo = (todo) => {
+    fetch('http://localhost:3001/todos', {
+      method: "POST",
+      header: "application/json",
+      body: JSON.stringify(todo)
+    })
+
+    setTodos((prevState) => [...prevState, todo])
+
+  }
+
   return (
     <div className="App">
       <div className="todo-container">
         <h1>📝 My To-Do List</h1>
 
-        <TodoForm />
+        <TodoForm addTodo={addTodo} />
         <TodoLists todos={todos} />
         <CheckAllAndRemaining />
         <div className="other-buttons-container">
