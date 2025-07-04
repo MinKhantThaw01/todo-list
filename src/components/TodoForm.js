@@ -10,7 +10,7 @@ const TodoForm = ({ addTodo }) => {
 
         //add todo
         let newTodo = {
-            id: Math.random(),
+            id: Math.random().toString(),
             title: todo,
             completed: false
         }

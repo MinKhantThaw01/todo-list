@@ -90,6 +90,15 @@ h1 {
   flex: 1;
 }
 
+.edit-form {
+  border-radius: 5px;
+  border-color: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 4px 15px;
+}
+
 .check-all-container {
   display: flex;
   justify-content: space-between;
